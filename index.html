@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>TD angular</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/myapp.css">
+</head>
+
+
+<body ng-app='todos'>
+	
+	<div ng-controller="ListsController" class="listes">
+		<h1>Lists</h1>
+		<ul >
+			<li ng-repeat="list in lists">
+				<list>
+			</li>
+		</ul>
+		<div class="actions">
+			<a href="#" ng-click="isAddFormOpen = !isAddFormOpen">Ajouter</a>
+			<a href="#" ng-click="isUpdateFormOpen = !isUpdateFormOpen" >Modifier</a>
+			<a href="#" ng-click="deleteList()">Supprimer</a>
+		</div>
+		<form ng-submit="addList()" ng-show="isAddFormOpen" class="form">
+			<h2>Ajouter une liste</h2>
+			<input type="text" ng-model="myangular">
+			<input type="submit">
+		</form>
+
+		<form ng-submit="UpdateList()" ng-show="isUpdateFormOpen" class="form">
+			<h2>Modifier une liste</h2>
+			<input type="text" ng-model="updatefield" ng-value="List.selected_list.label">
+			<input type="submit">
+		</form>
+	</div>
+	<div ng-controller="TodosController" class="listes">
+		<h1>Todos</h1>
+		<ul >
+			<li ng-repeat="todo in list_todos">
+				<todo>
+			</li>
+		</ul>
+
+	</div>
+
+</body>
+
+<script type="text/javascript" src="lib/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="lib/angular.min.js"></script>
+<script type="text/javascript" src="app/app.js"></script>
+<script type="text/javascript" src="app/controllers/lists_controller.js"></script>
+<script type="text/javascript" src="app/controllers/todos_controller.js"></script>
+<script type="text/javascript" src="app/directives/list_directive.js"></script>
+<script type="text/javascript" src="app/directives/todo_directive.js"></script>
+<script type="text/javascript" src="app/models/list.js"></script>
+<script type="text/javascript" src="app/models/todo.js"></script>
+
+</html>

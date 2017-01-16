@@ -1,0 +1,40 @@
+ul{
+	list-style: none;
+}
+
+.ng-scope.listes {
+    width: 30%;
+    padding: 1%;
+    border: 1px solid gray;
+    border-radius: 18px;
+    float: left;
+    margin-left: 10%;
+}
+
+.listes h1 {
+    border-bottom: 1px solid gray;
+    text-align: center;
+}
+
+.listes ul {
+    list-style: none;
+    border-bottom: 1px solid gray;
+    padding: 5%;
+}
+
+.actions a {
+    text-decoration: none;
+    padding: 8px 25px;
+    color: #444;
+    border: 2px solid rgba(195, 195, 195, 0.91);
+    background-color: #E6E6E6;
+    border-radius: 7px;
+    margin-left: 16px;
+}
+.actions {
+    text-align: center;
+}
+.form {
+    text-align: center;
+    margin-top: 30px;
+}
