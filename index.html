@@ -40,6 +40,23 @@
 			</li>
 		</ul>
 
+		<div class="actions">
+			<a href="#" ng-click="isAddTodoFormOpen = !isAddTodoFormOpen">Ajouter</a>
+			<a href="#" ng-click="isUpdateTodoFormOpen = !isUpdateTodoFormOpen" >Modifier</a>
+			<a href="#" ng-click="deleteTodo()">Supprimer</a>
+			<a href="#" ng-click="doneTodo()">Done</a>
+			<a href="#" ng-click="undoneTodo()">Undone</a>
+		</div>
+		<form ng-submit="addTodo()" ng-show="isAddTodoFormOpen" class="form">
+			<h2>Ajouter une tâche</h2>
+			<input type="text" ng-model="matache">
+			<input type="submit">
+		</form>
+		<form ng-submit="updateTodo()" ng-show="isUpdateTodoFormOpen" class="form">
+			<h2>Modifier une tâche</h2>
+			<input type="text" ng-model="matacheup" ng-value="Todo.selected_todo.text">
+			<input type="submit">
+		</form>
 	</div>
 
 </body>

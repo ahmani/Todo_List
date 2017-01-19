@@ -8,6 +8,7 @@ angular.module('todos').service('List',['$http',
 
 		List.prototype.select = function(){
 			List.selected_list = this;
+			
 		}
 			
 		return List;
