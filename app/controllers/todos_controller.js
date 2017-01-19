@@ -31,8 +31,6 @@ angular.module('todos').controller('TodosController',
 		$scope.$watch(function(){
 			return $scope.List.selected_list;
 		}, function(new_value,old_value){
-			console.log(old_value);
-			console.log(new_value)
 			if(new_value)
 			{
 				list_todos();
