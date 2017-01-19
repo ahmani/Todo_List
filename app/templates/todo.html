@@ -1,4 +1,4 @@
 <li>
-	<input type="checkbox" ng-model="check_id" value="{{todo.id}}" ng-click="todo.select()" >
+	<input type="radio" name="todo_element" ng-model="check_id" value="{{todo.id}}" ng-click="todo.select()" >
 	<label class="{{todo.done ? 'done' : 'undone'}}">{{todo.text}}</label>
 </li>
